@@ -8,7 +8,10 @@
     #projects,
 	#about,
 	#contact {
-		padding-top: 7rem;
+		padding-top: 5rem;
+    }
+    .lg-heading {
+        margin-top: 0.9rem;
     }
 }
 
@@ -18,14 +21,17 @@
 	#projects,
 	#about,
 	#contact {
-		padding-top: 7rem;
+		padding-top: 5rem;
     }
     
 	.language {
 		width: 15vh;
 		padding: 6vh 0;
 		font-size: small;
-	}
+    }
+    .lg-heading {
+        margin-top: 0.9rem;
+    }
 }
 
 // Tablets and small laptops
