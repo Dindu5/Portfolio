@@ -2,134 +2,297 @@
 
 @import 'menu';
 
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-    @include background();
-    background: $primary-color;
-    color: set-text-color($primary-color); 
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.2;
+	@include background();
+	background: $primary-color;
+	color: set-text-color($primary-color);
+	height: 100%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.2;
 }
 
 // Headings
-h1,h2,h3 {
-    margin: 0;
-    font-weight: 400;
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-weight: 400;
 
-    &.lg-heading {
-        font-size: 3rem;
-    }
-    &.sm-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
-    }
+	&.lg-heading {
+		font-size: 3rem;
+	}
+	&.sm-heading {
+		margin-bottom: 2rem;
+		padding: 0.2rem 0rem;
+		background: rgba(lighten($primary-color, 2), 0.5);
+		font-size: 1.2rem;
+	}
 }
 
 a {
-    color: #fff;
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	background-color: $primary-color;
+	opacity: 0.9;
 
-    .brand {
-        margin: 2rem 35px;
-        background-color: $primary-color;
-        max-width: fit-content;
-        h4{
-            color: #707070;
-        }
-    }
+	.brand {
+		margin: 2rem 35px;
+		background-color: $primary-color;
+		max-width: fit-content;
+		h4 {
+			color: #707070;
+		}
+	}
 }
 .text-secondary {
-    color: $secondary-color;
+	color: $secondary-color;
 }
 
 main {
-    padding: 4rem;
-    min-height: calc(100vh - 60px);
+	padding: 4rem;
+	min-height: calc(100vh - 60px);
 
-    .icons {
-        margin-top: 1rem;
-        
-        a{
-            padding: 0.4rem;
-            color: set-text-color($primary-color);
-            &:hover{
-                color: $secondary-color;
-                @include easeOut()
-            }
-            
-        }
-    }
+	.icons {
+		margin-top: 1rem;
 
-    &#home {
-        overflow: hidden;
-        h1 {
-            margin-top: 30vh;
-        }
-    }
+		a {
+			padding: 0.4rem;
+			color: set-text-color($primary-color);
+			&:hover {
+				color: $secondary-color;
+				@include easeOut();
+			}
+		}
+	}
+
+	&#home {
+		overflow: hidden;
+		h2.greeting {
+			margin-top: 30vh;
+			margin-bottom: 0.2rem;
+		}
+	}
 }
 
 .about-info {
-    display: grid;
-    grid-gap: 2vw;
-    grid-row-gap: 3vh;
-    grid-template-areas:
-     'bioimage bio bio'
-     'job1 job2 job3' 
-    ;
-    grid-template-columns: repeat(3, 1fr);
+	display: grid;
+	grid-gap: 2vw;
+	grid-row-gap: 3vh;
+	grid-template-areas: 'bioimage bio bio';
+	grid-template-columns: repeat(3, 1fr);
 
-    
-    .bio-image{
-        grid-area: bioimage;
-        margin: auto;
-        border-radius: 50%;
-        border: $secondary-color solid 3px;
-        height: 150px;
-        
-    }
+	.bio-image {
+		grid-area: bioimage;
+		margin: auto;
+		border-radius: 50%;
+		border: $secondary-color solid 3px;
+		height: 150px;
+	}
 
-    .bio{
-        grid-area: bio;
-        font-size: large;
-
-    }
-
-    .skill-1{
-        grid-area: job1;
-    }
-    .skill-2{
-        grid-area: job2;
-    }
-    .skill-3{
-        grid-area: job3;
-    }
-
-    .job {
-        background: lighten($primary-color, 3);
-        padding: 10px;
-        border-left: $secondary-color 5px solid;
-    }
+	.bio {
+		grid-area: bio;
+		h3 {
+			margin-bottom: 1rem;
+		}
+		p {
+			font-size: 0.85rem;
+			line-height: 1.2;
+			margin: 7px 0;
+		}
+	}
 }
 
-#footer{
-    text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 5);
-    color: set-text-color($primary-color);
+.title-text {
+	margin: 6vh 0;
+}
+
+.job-description {
+	display: grid;
+	grid-gap: 2vw;
+	grid-row-gap: 3vh;
+	grid-template-areas: 'job1 job2 job3';
+	grid-template-columns: repeat(3, 1fr);
+	margin: 2vh 0;
+
+	.skill-1 {
+		grid-area: job1;
+	}
+	.skill-2 {
+		grid-area: job2;
+	}
+	.skill-3 {
+		grid-area: job3;
+	}
+
+	.job {
+		background: lighten($primary-color, 3);
+		padding: 15px;
+		border-left: $secondary-color 3px solid;
+		line-height: 1.5;
+
+		h3 {
+			text-align: left;
+			margin: 5px 0 40px 0;
+			text-transform: capitalize;
+		}
+
+		h6 {
+			font-size: small;
+			text-align: left;
+			margin: 15px 0;
+		}
+		p {
+			margin-top: 2vh;
+			font-size: small;
+		}
+	}
+}
+
+.skillset {
+	display: grid;
+	grid-gap: 3vw;
+	grid-template-areas: 'development tools design';
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 2vh 0;
+	text-align: center;
+	font-weight: 200;
+	h2 {
+		margin: 2rem 0;
+	}
+	.languages {
+		grid-area: development;
+
+		.language-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-row-gap: 6vh;
+			grid-column-gap: 2vh;
+
+			.language {
+				margin: auto;
+
+				border: 2px solid $secondary-color;
+				border-radius: 50%;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+
+	.tools {
+		grid-area: tools;
+		text-align: left;
+
+		.tool {
+			margin-top: -12px;
+			line-height: 2.5;
+			font-weight: 200;
+		}
+	}
+	.designs {
+		grid-area: design;
+		text-align: left;
+
+		img {
+			margin-right: 10px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+// Work & Projects
+
+.projects {
+	display: grid;
+	grid-gap: 3vw;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 3rem;
+
+	img {
+		width: 100%;
+		height: 16vw;
+		border: 3px solid white;
+
+		&:hover,
+		&:active {
+			opacity: 0.5;
+			@include easeOut;
+		}
+	}
+}
+
+.btn {
+	display: block;
+	padding: 0.3rem 0.5rem;
+	border: 0;
+	margin-bottom: 0.3rem;
+	font-size: small;
+
+	&:hover,
+	&:active {
+		background-color: $secondary-color;
+		color: set-text-color($secondary-color);
+	}
+}
+
+.btn-dark {
+	@extend .btn;
+	background: darken($primary-color, 50);
+	color: white;
+}
+
+.btn-light {
+	@extend .btn;
+	background: lighten($primary-color, 50);
+	color: #333;
+}
+
+.project-text {
+	padding: 2rem 0.9rem;
+	background: lighten($primary-color, 15);
+
+	h5 {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+		i {
+			color: $secondary-color;
+		}
+	}
+	p {
+		font-size: small;
+	}
+}
+// contact
+
+.contact {
+	margin: 20vh 0;
+	h3 {
+		margin: 1rem 0;
+	}
+	i {
+		margin-right: 5px;
+	}
+}
+
+#footer {
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 1rem;
+	background: darken($primary-color, 5);
+	color: set-text-color($primary-color);
 }
 
 @import 'mobile';
