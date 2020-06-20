@@ -159,7 +159,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  min-height: calc(100vh - 50px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -321,7 +321,8 @@ main {
   text-align: center;
   padding: 1rem;
   background: black;
-  color: #fff; }
+  color: #fff;
+  height: 50px; }
 
 @media screen and (min-width: 1171px) {
   .language {
@@ -330,17 +331,21 @@ main {
   #projects,
   #about,
   #contact {
-    padding-top: 7rem; } }
+    padding-top: 5rem; }
+  .lg-heading {
+    margin-top: 0.9rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   #projects,
   #about,
   #contact {
-    padding-top: 7rem; }
+    padding-top: 5rem; }
   .language {
     width: 15vh;
     padding: 6vh 0;
-    font-size: small; } }
+    font-size: small; }
+  .lg-heading {
+    margin-top: 0.9rem; } }
 
 @media screen and (max-width: 768px) {
   main {
