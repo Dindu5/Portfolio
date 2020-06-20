@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "My Portfolio Website",
   "main": "index.js",
+  "homepage": "http://dindu5.github.io/Portfolio",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist2/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist2/css/ --recursive",
+    "deploy": "gh-pages -d dist2"
   },
   "keywords": [
     "Portfolio"
@@ -12,6 +14,7 @@
   "author": "Chimdindu Emmanuel",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^3.0.0",
     "node-sass": "^4.14.1"
   }
 }

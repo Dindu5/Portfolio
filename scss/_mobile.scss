@@ -4,7 +4,12 @@
 	.language {
 		width: 18vh;
 		padding: 8vh 0;
-	}
+    }
+    #projects,
+	#about,
+	#contact {
+		padding-top: 7rem;
+    }
 }
 
 // Desktops and Laptops
@@ -13,9 +18,9 @@
 	#projects,
 	#about,
 	#contact {
-		padding-top: 5rem;
-	}
-
+		padding-top: 7rem;
+    }
+    
 	.language {
 		width: 15vh;
 		padding: 6vh 0;
